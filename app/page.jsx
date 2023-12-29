@@ -14,6 +14,7 @@ export default function Home() {
     ref.current.scrollIntoView({ behavior: 'smooth' })
   }
 
+
   return (
     <main className='overflow-x-hidden'>
       <Mainpage 

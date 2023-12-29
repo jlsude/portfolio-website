@@ -1,11 +1,12 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import programmer from '../../public/programmergif.gif'
-import github from '../../public/github.png'
-import mail from '../../public/mail.svg'
-import upwork from '../../public/upwork.svg'
+import programmer from '../../public/static/programmergif.gif'
+import github from '../../public/static/github.png'
+import mail from '../../public/static/mail.svg'
+import upwork from '../../public/static/upwork.svg'
 import TypeEffect from './components/TypeEffect'
+import Link from 'next/link'
 
 
 export default function Mainpage({scrollToAbout, scrollToSkills, scrollToProjects}) {
@@ -31,19 +32,19 @@ export default function Mainpage({scrollToAbout, scrollToSkills, scrollToProject
               
               <ul className='flex flex-row gap-10 items-center mt-5 justify-center'>
                 <li className='w-8 cursor-pointer'>
-                  <a href="https://github.com/jlsude" target='_blank' rel="noopener noreferrer">
+                  <Link href="https://github.com/jlsude" target='_blank' rel="noopener noreferrer">
                     <Image src={github} alt="github"/>
-                  </a>
+                  </Link>
                 </li>
                 <li className='w-10 cursor-pointer' >
-                  <a href="https://mail.google.com/mail/?view=cm&source=mailto&to=sudejohnlouie@gmail.com" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://mail.google.com/mail/?view=cm&source=mailto&to=sudejohnlouie@gmail.com" target="_blank" rel="noopener noreferrer">
                     <Image src={mail} alt="mail" />
-                  </a>
+                  </Link>
                 </li>
                 <li className='w-10 cursor-pointer'>
-                  <a href="https://www.upwork.com/freelancers/~012761a013c53f8aa9?viewMode=1" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://www.upwork.com/freelancers/~012761a013c53f8aa9?viewMode=1" target="_blank" rel="noopener noreferrer">
                     <Image src={upwork} alt="upwork" />
-                  </a>
+                  </Link>
                 </li>
               </ul>
           </div>
