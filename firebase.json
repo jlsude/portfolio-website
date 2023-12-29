@@ -1,6 +1,7 @@
 {
   "hosting": {
-    "public": ".next",
+    "public": ".next/server/app",
+    "site": "jlsude",
     "ignore": [
       "firebase.json",
       "**/.*",
