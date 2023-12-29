@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link'
 
 export default function ProjectCard({projectName, github, backend, 
         demo, platform, description, status, tech, isPrivate, isOnline, thumbnail, hasBackend}) {
@@ -20,17 +21,17 @@ export default function ProjectCard({projectName, github, backend,
                     {!isPrivate ? (
                         <li  className='border-primary inline-block border-4 rounded-full 
                         px-1 py-0.5 text-xs mx-1 my-0.5 md:text-xs ml-0'>
-                            <a href={github} target="_blank" className='hover:underline' rel="noopener noreferrer">Repo</a>
+                            <Link href={github} target="_blank" className='hover:underline' rel="noopener noreferrer">Repo</Link>
                             {hasBackend? <>
                                 <span>&nbsp;|&nbsp;</span>
-                                <a href={backend} target="_blank" className='hover:underline' rel="noopener noreferrer">Backend</a>
+                                <Link href={backend} target="_blank" className='hover:underline' rel="noopener noreferrer">Backend</Link>
                             </> : (null)}
                             
                         </li>
                     ) : (null)}
                     {isOnline ? (
                         <li className='border-primary inline-block border-4 rounded-full px-1 py-0.5 text-xs mx-1 my-0.5 md:text-xs '>
-                            <a href={demo} target="_blank" className='hover:underline' rel="noopener noreferrer">Demo</a>
+                            <Link href={demo} target="_blank" className='hover:underline' rel="noopener noreferrer">Demo</Link>
                         </li>
                     ) : (null)}
                     
