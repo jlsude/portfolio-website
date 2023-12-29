@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "portfolio-website-2ea6c"
-  }
+  },
+  "targets": {
+    "portfolio-website-2ea6c": {
+      "hosting": {
+        "jlsude": [
+          "jlsude"
+        ],
+        "johnlouiesude": [
+          "johnlouiesude"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
