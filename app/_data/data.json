@@ -1,0 +1,54 @@
+{
+    "skills":
+        {
+            "languages": [
+                {"name": "HTML/CSS", "confidenceLevel": 2},
+                {"name": "C++", "confidenceLevel": 3},
+                {"name": "Python", "confidenceLevel": 2},
+                {"name": "JavaScript", "confidenceLevel": 3},
+                {"name": "SQL", "confidenceLevel": 2},
+                {"name": "Verilog", "confidenceLevel": 1}
+            ],
+            "frameworksLibraries": [
+                {"name": "Vue.js", "confidenceLevel": 2},
+                {"name": "React.js", "confidenceLevel": 3},
+                {"name": "Pandas", "confidenceLevel": 3},
+                {"name": "Seaborn", "confidenceLevel": 2},
+                {"name": "Next.js", "confidenceLevel": 1},
+                {"name": "Flask", "confidenceLevel": 1},
+                {"name": "TailwindCSS", "confidenceLevel": 1},
+                {"name": "Scikit-learn", "confidenceLevel": 2},
+                {"name": "React Native", "confidenceLevel": 2},
+                {"name": "Node.js", "confidenceLevel": 2},
+                {"name": "Express.js", "confidenceLevel": 2}
+            ],
+            "tools": [
+                {"name": "VS Code", "confidenceLevel": 3},
+                {"name": "Figma", "confidenceLevel": 3},
+                {"name": "Firebase", "confidenceLevel": 2},
+                {"name": "Github", "confidenceLevel": 3},
+                {"name": "Google Collab", "confidenceLevel": 3},
+                {"name": "Render", "confidenceLevel": 1}
+            ]       
+            
+        },
+    "projects":[
+        {   
+            "thumbnail": "/thumbnails/HeartAttackPredictionAnalysis.png",
+            "projectName": "Heart Attack Classification Analysis",
+            "description": "A data science final group project that applies Support Vector Machine algorithm for predicting heart attacks. It utilizes React.js for the UI and Python-built Flask server for the backend.",
+            "platform": "Web",
+            "github": "https://github.com/jlsude/data-science-II-final-project",
+            "backend": "https://github.com/jlsude/backend-data-science-II-final-project",
+            "demo": "https://data-science-ii-final-project.web.app/",
+            "isPrivate": false,
+            "isOnline": true,
+            "hasBackend": true,
+            "status": "Completed",
+            "tech": [
+                "React.js", "Flask", "Scikit-learn", "Pandas"
+            ]
+        }
+    ]
+    
+}

@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+h1 {
+  @apply text-5xl font-bold my-1 text-primary;
+}
+
+h2 {
+    @apply text-2xl font-bold text-primary;
+}
+
+h3 {
+    @apply text-xl font-bold text-primary;
+}
+
+h4 {
+    @apply text-lg font-bold text-primary;
+}
+
+label {
+    @apply text-sm text-fontColor;
+}
+
+p {
+    @apply text-sm md:text-base text-fontColor;
+}
+
+li {
+    @apply inline-block mx-1;
+}
+
+
+.skills li {
+    @apply inline-block rounded-full px-1 py-0.5 text-xs mx-1 my-0.5 md:text-sm;
+}
+
+
+::-webkit-scrollbar {
+    @apply w-2
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-cardColor
+}
+ 
+::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full
+    
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-fontColor
+}
