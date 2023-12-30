@@ -8,7 +8,7 @@ export default function ProjectCard({projectName, github, backend,
     return (
         <div className='flex flex-col w-8/12 shadow-md md:w-9/12 md:min-w-[42rem] md:h-80 border md:flex-row rounded-xl bg-cardColor '>
 
-            <Image src={thumbnail} alt={projectName} width={500} height={500} priority={true}
+            <Image src={`/static/thumbnails/${thumbnail}`} alt={projectName} width={500} height={500} priority={true}
                 className='w-full aspect-video md:h-full md:w-auto md:aspect-square rounded-t-xl md:rounded-l-xl md:rounded-tr-none 
                 bg-white object-cover'
             />
@@ -41,7 +41,7 @@ export default function ProjectCard({projectName, github, backend,
                     Platform: {platform}
                 </label>
 
-                <p > 
+                <p className='description'> 
                     {/* limits to 200 characthers only */}
                     {description}
                 </p>
