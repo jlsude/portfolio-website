@@ -31,11 +31,13 @@ li {
     @apply inline-block mx-1;
 }
 
-
 .skills li {
     @apply inline-block rounded-full px-1 py-0.5 text-xs mx-1 my-0.5 md:text-sm;
 }
 
+.description {
+    @apply text-sm lg:text-base text-fontColor;
+}
 
 ::-webkit-scrollbar {
     @apply w-2
