@@ -1,11 +1,13 @@
 {
   "hosting": {
-    "site": "jlsude",
-    "public": "out",
+    "source": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "frameworksBackend": {
+      "region": "asia-east1"
+    }
   }
 }
