@@ -17,11 +17,11 @@ const AboutSkills = React.forwardRef((props, ref) => {
       <div className="col-span-full row-span-3 flex flex-col gap-3 p-5 text-justify md:col-span-4 md:col-start-1 md:row-span-4 md:row-start-2 xl:col-span-5 xl:col-start-2 xl:row-span-4 xl:row-start-2">
         <h2 className="mb-5 text-center">about</h2>
         <p className="indent-5">
-          I’m a senior Computer Engineering student at the Technological
+          I&apos;m a senior Computer Engineering student at the Technological
           Institute of the Philippines - Manila with a passion for full-stack
           development, software engineering, data science, machine learning.
-          Throughout my college journey, I’ve been honored with awards like
-          President's, Vice President's, and Dean's Listers.
+          Throughout my college journey, I&apos;ve been honored with awards like
+          President&apos;s, Vice President&apos;s, and Dean&apos;s Listers.
         </p>
         <p className="indent-5">
           In my free time, I love working on cool software projects to sharpen
@@ -31,7 +31,7 @@ const AboutSkills = React.forwardRef((props, ref) => {
           always open to future collaborations and work.
         </p>
         <p className="indent-5">
-          As of the moment, I’m diving into web and mobile development and
+          As of the moment, I&apos;m diving into web and mobile development and
           mixing in several machine learning models. My goal is to become an
           accomplished and proficient professional in the field of software
           engineering who can create innovative and impactful solutions.
