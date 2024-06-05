@@ -1,10 +1,20 @@
 {
-  "hosting": {
-    "site": "jlsude",
-    "public": "out",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "frameworksBackend": {
-      "region": "asia-east1"
+  "hosting": [
+    {
+      "site": "jlsude",
+      "public": "out",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "frameworksBackend": {
+        "region": "asia-east1"
+      }
+    },
+    {
+      "site": "johnlouiesude",
+      "public": "out",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "frameworksBackend": {
+        "region": "asia-east1"
+      }
     }
-  }
+  ]
 }
