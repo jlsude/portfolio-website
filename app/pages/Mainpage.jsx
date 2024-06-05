@@ -1,81 +1,36 @@
-"use client"
-import React from 'react'
-import Image from 'next/image'
-import programmer from '../../public/static/programmergif.gif'
-import github from '../../public/static/github.png'
-import mail from '../../public/static/mail.svg'
-import upwork from '../../public/static/upwork.svg'
-import TypeEffect from './components/TypeEffect'
-import Link from 'next/link'
+"use client";
+import React from "react";
+import Image from "next/image";
+import programmer from "../../public/static/programmergif.gif";
+import github from "../../public/static/github.png";
+import mail from "../../public/static/mail.svg";
+import upwork from "../../public/static/upwork.svg";
+import TypeEffect from "../components/TypeEffect";
+import Link from "next/link";
 
+import primaryWaves from "../../public/static/waves/primary-waves.svg";
 
-export default function Mainpage({scrollToAbout, scrollToSkills, scrollToProjects}) {
-
+export default function Mainpage() {
   return (
-    <main className='flex flex-col items-center justify-evenly w-screen h-dvh '>
-      
-      <div className='flex flex-col justify-evenly w-full h-3/4 mx-16 gap-5 lg:flex-row-reverse md:items-center lg:h-1/2 lg:gap-18 '>
-          <div className='w-3/4 min-w-64 max-w-96 self-center md:w-96'>
-              <Image src={programmer} alt="programmer" priority={true} className='rounded-3xl aspect-square object-cover'/>
-          </div>
-
-          <div className='text-center lg:text-start'>
-              <label>hi! i am</label>
-              <h1>john louie</h1>
-              <p className='mx-10 sm:mx-0'>a computer engineering student from manila, philippines</p>
-              <p className='inline-block'>
-                specializing in&nbsp;
-              </p>
-              <span className='text-accent font-bold inline-block'>
-                <TypeEffect />
-              </span>
-              
-              <ul className='flex flex-row gap-10 items-center mt-5 justify-center'>
-                <li className='w-8 cursor-pointer'>
-                  <Link href="https://github.com/jlsude" target='_blank' rel="noopener noreferrer">
-                    <Image src={github} alt="github"/>
-                  </Link>
-                </li>
-                <li className='w-10 cursor-pointer' >
-                  <Link href="https://mail.google.com/mail/?view=cm&source=mailto&to=sudejohnlouie@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <Image src={mail} alt="mail" />
-                  </Link>
-                </li>
-                <li className='w-10 cursor-pointer'>
-                  <Link href="https://www.upwork.com/freelancers/~012761a013c53f8aa9?viewMode=1" target="_blank" rel="noopener noreferrer">
-                    <Image src={upwork} alt="upwork" />
-                  </Link>
-                </li>
-              </ul>
-          </div>
-          
+    <main className="grid-template-system relative h-dvh w-screen bg-background">
+      <div className="absolute h-[345px] w-screen">
+        <Image
+          src={primaryWaves}
+          alt="primary waves"
+          priority
+          className="h-full w-full max-w-none bg-background object-cover sm:object-fill"
+        />
       </div>
-
-      <div className='flex justify-center w-full '>
-        <ul className='flex flex-row gap-10 sm:gap-20 lg:gap-56'>
-          <li>
-            <button onClick={scrollToAbout}>
-              <h2 className='hover:underline'>about</h2>
-            </button>
-          </li>
-          <li>
-            <button onClick={scrollToAbout} className='hidden sm:inline-block'>
-              <h2 className='hover:underline'>skills</h2>
-            </button>
-
-            <button onClick={scrollToSkills} className='sm:hidden'>
-              <h2 className='hover:underline'>skills</h2>
-            </button>
-
-          </li>
-          <li>
-            <button onClick={scrollToProjects}>
-              <h2 className='hover:underline'>projects</h2>
-            </button>
-          </li>
-        </ul>
+      <div className="col-span-4 row-span-2 row-start-5 md:col-span-6 md:col-start-2 md:row-span-1 md:row-start-4 xl:col-span-10 xl:col-start-2">
+        <h3>Hello! I am</h3>
+        <h1 className="font-bold text-accent">John Louie</h1>
+        <h4>
+          A senior computer engineering student with an interest in&nbsp;
+          <span className="inline-block font-bold text-accent">
+            <TypeEffect />
+          </span>
+        </h4>
       </div>
-
     </main>
-  )
+  );
 }

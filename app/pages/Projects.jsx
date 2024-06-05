@@ -1,43 +1,65 @@
-import Image from 'next/image'
-import React from 'react'
-import ProjectCard from './components/ProjectCard'
-import data from '../_data/data.json'
+import React, { useRef, useState, useEffect } from "react";
+import ProjectCard from "../components/ProjectCard";
+import data from "../_data/data.json";
+import Carousel from "../components/Carousel";
+import ProjectModal from "../components/ProjectModal";
 
-const Projects = React.forwardRef((props, ref) =>  {
-
+const Projects = React.forwardRef((props, ref) => {
+  const [displayModal, setDisplayModal] = useState(false);
+  const [projectModalData, setProjectModalData] = useState({});
+  const projectsRef = useRef(null);
   const projects = data.projects;
 
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: "auto" });
+  };
+
+  useEffect(() => {
+    if (displayModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [displayModal]);
+
   return (
-    <main ref={ref} className='flex w-screen min-h-screen flex-col items-center '>
-        <h2 className='my-10'>projects</h2>
-        <div className='flex flex-col gap-5 items-center pb-10'>
+    <main
+      ref={projectsRef}
+      className="grid-template-system relative min-h-screen w-screen bg-[#231D18]"
+    >
+      {displayModal ? (
+        <ProjectModal
+          {...projectModalData}
+          setDisplayModal={setDisplayModal}
+          className={"absolute z-10"}
+        />
+      ) : null}
 
-          {projects.map((project, index) => {
-            return (
-              <ProjectCard 
-                key={index} 
-                projectName={project.projectName}
-                github={project.github}
-                backend={project.backend}
-                demo={project.demo}
-                platform={project.platform}
-                description={project.description}
-                status={project.status}
-                tech={project.tech}
-                isPrivate={project.isPrivate}
-                isOnline={project.isOnline}
-                thumbnail={project.thumbnail}
-                hasBackend={project.hasBackend}
-
-              />
-            )
-          })}
-
-            
-        </div>
+      <div className="col-span-full row-start-1 flex items-end justify-center md:items-center">
+        <h2>projects</h2>
+      </div>
+      <Carousel>
+        {projects.map((item, index) => {
+          return (
+            <ProjectCard
+              key={index}
+              {...item}
+              onClick={() => {
+                scrollToSection(projectsRef);
+                setDisplayModal(true);
+                setProjectModalData(item);
+              }}
+            />
+          );
+        })}
+      </Carousel>
     </main>
-  ) 
-})
+  );
+});
 
-Projects.displayName = 'Projects';
+Projects.displayName = "Projects";
 export default Projects;

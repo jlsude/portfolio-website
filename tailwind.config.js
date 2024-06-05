@@ -8,13 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#003140',
-        accent: '#FF6A13',
-        accentLow: '#FFDBC6',
-        accentMid: '#FFA26B' ,
-        fontColor: '#295564',
-        cardColor: '#FAFEFF'
+        'text': 'rgb(var(--text))',
+        'background': 'rgb(var(--background))',
+        'primary': 'rgb(var(--primary))',
+        'secondary': 'rgb(var(--secondary))',
+        'accent': 'rgb(var(--accent))',
       }
+       
     },
   },
   plugins: [],

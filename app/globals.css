@@ -2,56 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
+.colorTransition {
+  transition: background-color 0.2s ease-in;
+}
 
 h1 {
-  @apply text-5xl font-bold my-1 text-primary;
+  @apply text-[29px] text-text md:text-[39px];
 }
 
 h2 {
-    @apply text-2xl font-bold text-primary;
+  @apply text-[24px] text-text md:text-[31px];
 }
 
 h3 {
-    @apply text-xl font-bold text-primary;
+  @apply text-[20px] text-text md:text-[25px];
 }
 
 h4 {
-    @apply text-lg font-bold text-primary;
-}
-
-label {
-    @apply text-sm text-fontColor;
+  @apply text-[17px] text-text md:text-[20px];
 }
 
 p {
-    @apply text-sm md:text-base text-fontColor;
+  @apply text-[14px] text-text md:text-[16px];
+}
+
+.p-small {
+  @apply text-[12px] text-text md:text-[13px];
+}
+
+small {
+  @apply text-[10px] text-text;
 }
 
 li {
-    @apply inline-block mx-1;
+  @apply mx-1 inline-block text-text;
+}
+
+.grid-template-system {
+  @apply grid grid-cols-4 grid-rows-7 items-stretch justify-stretch gap-x-[12px] gap-y-[8px] px-[12px] md:grid-cols-8 md:grid-rows-6 md:gap-x-[16px] md:px-[32px] xl:grid-cols-[repeat(12,_77px)] xl:justify-center xl:gap-x-[20px] xl:px-0;
 }
 
 .skills li {
-    @apply inline-block rounded-full px-1 py-0.5 text-xs mx-1 my-0.5 md:text-sm;
+  @apply mx-1 my-0.5 inline-block rounded-full border-4 border-accent px-1 py-0.5 text-xs text-text md:text-sm;
 }
 
 .description {
-    @apply text-sm lg:text-base text-fontColor;
+  @apply text-sm text-text lg:text-base;
 }
 
 ::-webkit-scrollbar {
-    @apply w-2
+  @apply w-2 bg-[#18120c];
 }
 
 ::-webkit-scrollbar-track {
-    @apply bg-cardColor
+  @apply bg-[#c7c0b8]/10;
 }
- 
+
 ::-webkit-scrollbar-thumb {
-    @apply bg-primary rounded-full
-    
+  @apply bg-[#474038];
 }
- 
+
 ::-webkit-scrollbar-thumb:hover {
-    @apply bg-fontColor
+  @apply bg-[#090807];
+}
+
+.scrollBar::-webkit-scrollbar {
+  @apply w-2 bg-[#18120c];
+}
+
+.scrollBar::-webkit-scrollbar-track {
+  @apply bg-[#c7c0b8]/10;
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+  @apply bg-[#474038];
+}
+
+.scrollBar::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#090807];
+}
+
+.slick-slide > div {
+  margin: 0 5px;
+}
+
+@layer base {
+  :root {
+    --text: 9 8 7;
+    --background: 243 237 231;
+    --primary: 71 64 56;
+    --secondary: 183 196 177;
+    --accent: 255 128 0;
+  }
+  .dark {
+    --text: 248 247 246;
+    --background: 24 18 12;
+    --primary: 199 192 184;
+    --secondary: 65 78 59;
+    --accent: 255 128 0;
+  }
 }
