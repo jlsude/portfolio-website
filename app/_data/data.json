@@ -34,13 +34,25 @@
   },
   "projects": [
     {
+      "thumbnail": "MammalSpeciesClassification.png",
+      "projectName": "Mammal Species Classifcation",
+      "description": "An image classification project that uses the MobileNet Convolution Neural Network architecture of Tensorflow. The model was trained to identify 42 mammal species via transfer learning using TeachableMachine, a machine learning web-based tool of Google. The dataset used was sourced from Kaggle.",
+      "platform": ["Web (responsive)"],
+      "github": "https://github.com/jlsude/mammal-species-classification",
+      "demoLink": "https://mammal-species-classification.web.app/",
+      "isPrivate": true,
+      "online": true,
+      "status": "Completed",
+      "techStack": ["Tensorflow.js", "React.js", "TailwindCSS"]
+    },
+    {
       "thumbnail": "HeartAttackPredictionAnalysis.png",
       "projectName": "Heart Attack Classification Analysis",
       "description": "A data science final group project that applies Support Vector Machine algorithm for predicting heart attack cases. It utilizes React.js for the UI and Python-built Flask server for the backend. The dataset used is sourced from Kaggle.",
       "platform": ["Desktop Web"],
       "github": "https://github.com/jlsude/data-science-II-final-project",
       "demoLink": "https://heart-attack-analysis.web.app/",
-      "isPrivate": false,
+      "isPrivate": true,
       "online": true,
       "status": "Completed",
       "techStack": ["React.js", "Flask", "Scikit-learn", "Pandas"]
@@ -64,7 +76,7 @@
       "platform": ["Desktop Web"],
       "github": "https://github.com/jlsude/data_science_smoker_or_not",
       "demoLink": "https://smoker-or-not.web.app/",
-      "isPrivate": false,
+      "isPrivate": true,
       "online": true,
       "status": "Completed",
       "techStack": ["React.js", "Scikit-learn", "Pandas"]
