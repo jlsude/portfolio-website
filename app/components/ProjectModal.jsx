@@ -50,7 +50,7 @@ export default function ProjectModal(props) {
               })}
             </p>
 
-            {isPrivate ? (
+            {isPrivate ? null : (
               <Link
                 href={demoLink}
                 target="_blank"
@@ -59,7 +59,7 @@ export default function ProjectModal(props) {
               >
                 Demo
               </Link>
-            ) : null}
+            )}
           </div>
 
           <p className="mt-5 text-justify indent-5">{description}</p>
