@@ -40,46 +40,22 @@
       "platform": ["Web (responsive)"],
       "github": "https://github.com/jlsude/mammal-species-classification",
       "demoLink": "https://mammal-species-classification.web.app/",
-      "isPrivate": true,
+      "isPrivate": false,
       "online": true,
       "status": "Completed",
       "techStack": ["Tensorflow.js", "React.js", "TailwindCSS"]
     },
     {
-      "thumbnail": "HeartAttackPredictionAnalysis.png",
-      "projectName": "Heart Attack Classification Analysis",
-      "description": "A data science final group project that applies Support Vector Machine algorithm for predicting heart attack cases. It utilizes React.js for the UI and Python-built Flask server for the backend. The dataset used is sourced from Kaggle.",
-      "platform": ["Desktop Web"],
-      "github": "https://github.com/jlsude/data-science-II-final-project",
-      "demoLink": "https://heart-attack-analysis.web.app/",
+      "thumbnail": "LakbayThumbnail.png",
+      "projectName": "Lakbay",
+      "description": "A full-stack software project enabling users to discover landmarks and track their travel adventures. It highlights nearby landmarks using GPS coordinates, offers thematic bucket lists to inspire exploration, and fosters storytelling through a seamless digital experience.",
+      "platform": ["Mobile", "Web (responsive)"],
+      "github": "",
+      "demoLink": "",
       "isPrivate": true,
-      "online": true,
-      "status": "Completed",
-      "techStack": ["React.js", "Flask", "Scikit-learn", "Pandas"]
-    },
-    {
-      "thumbnail": "ArtsyLensAppointmentSystem.png",
-      "projectName": "Artsy Lens Appointment System",
-      "description": "A Database Management System final group project that applies database normalization and relational concepts. It is built with respect to the business rules of Artsy Lens, a photography business, and is implemented using MySQL, Express.js, and Node.js environment.",
-      "platform": ["Backend"],
-      "github": "https://github.com/jlsude/CPE-202-CPE21S3-Final-Project-Group-3",
-      "demoLink": "N/A",
-      "isPrivate": false,
       "online": false,
-      "status": "Completed, Offline",
-      "techStack": ["MySQL", "Node.js", "Express.js"]
-    },
-    {
-      "thumbnail": "SmokerOrNot.png",
-      "projectName": "Smoker or Not: Regression Analysis",
-      "description": "An adapted version of a data science group activity that applies Logistic Reqression algorithm for smoker probability prediction. It utilizes React.js for the UI and uses Scikit-learn for data processsing to extract the maximum likelihood equation. The dataset used is sourced from Kaggle.",
-      "platform": ["Desktop Web"],
-      "github": "https://github.com/jlsude/data_science_smoker_or_not",
-      "demoLink": "https://smoker-or-not.web.app/",
-      "isPrivate": true,
-      "online": true,
-      "status": "Completed",
-      "techStack": ["React.js", "Scikit-learn", "Pandas"]
+      "status": "Under Development",
+      "techStack": ["Firebase", "Express", "React.js", "Node.js"]
     }
   ]
 }
