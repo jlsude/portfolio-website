@@ -7,21 +7,28 @@
       { "name": "JavaScript", "confidenceLevel": 3 },
       { "name": "SQL", "confidenceLevel": 2 },
       { "name": "Verilog", "confidenceLevel": 1 },
-      { "name": "Assembly", "confidenceLevel": 2 }
+      { "name": "Assembly", "confidenceLevel": 2 },
+      { "name": "TypeScript", "confidenceLevel": 1 },
+      { "name": "Java", "confidenceLevel": 1 },
+      { "name": "Kotlin", "confidenceLevel": 1 }
     ],
     "frameworksLibraries": [
       { "name": "Vue.js", "confidenceLevel": 2 },
-      { "name": "React.js", "confidenceLevel": 3 },
+      { "name": "React", "confidenceLevel": 3 },
       { "name": "Pandas", "confidenceLevel": 2 },
       { "name": "Seaborn", "confidenceLevel": 2 },
+      { "name": "Matplotlib", "confidenceLevel": 1 },
+      { "name": "Plotly Express", "confidenceLevel": 2 },
       { "name": "Next.js", "confidenceLevel": 1 },
       { "name": "Flask", "confidenceLevel": 1 },
       { "name": "TailwindCSS", "confidenceLevel": 3 },
       { "name": "Scikit-learn", "confidenceLevel": 2 },
-      { "name": "React Native", "confidenceLevel": 2 },
+      { "name": "React Native", "confidenceLevel": 1 },
       { "name": "Node.js", "confidenceLevel": 2 },
       { "name": "Express.js", "confidenceLevel": 2 },
-      { "name": "Tensorflow", "confidenceLevel": 2 }
+      { "name": "Tensorflow", "confidenceLevel": 2 },
+      { "name": "ONNX.js", "confidenceLevel": "1" },
+      { "name": "Android Jetpack Compose", "confidenceLevel": 1 }
     ],
     "tools": [
       { "name": "VS Code", "confidenceLevel": 3 },
@@ -29,7 +36,8 @@
       { "name": "Firebase", "confidenceLevel": 3 },
       { "name": "Github", "confidenceLevel": 3 },
       { "name": "Google Collab", "confidenceLevel": 3 },
-      { "name": "Render", "confidenceLevel": 3 }
+      { "name": "Render", "confidenceLevel": 3 },
+      { "name": "Kaggle", "confidenceLevel": 3 }
     ]
   },
   "projects": [
@@ -37,25 +45,79 @@
       "thumbnail": "MammalSpeciesClassification.png",
       "projectName": "Mammal Species Classifcation",
       "description": "An image classification project that uses the MobileNet Convolution Neural Network architecture of Tensorflow. The model was trained to identify 42 mammal species via transfer learning using TeachableMachine, a machine learning web-based tool of Google. The dataset used was sourced from Kaggle.",
-      "platform": ["Web (responsive)"],
+      "platform": ["Web App (responsive)"],
       "github": "https://github.com/jlsude/mammal-species-classification",
       "demoLink": "https://mammal-species-classification.web.app/",
       "isPrivate": false,
       "online": true,
       "status": "Completed",
-      "techStack": ["Tensorflow.js", "React.js", "TailwindCSS"]
+      "techStack": ["Firebase", "Tensorflow.js", "React.js", "TailwindCSS"]
+    },
+    {
+      "thumbnail": "KNMammalClassificationWithCNNAndRegularization.png",
+      "projectName": "Kaggle Notebook: Mammal Classification with CNN and Regularization",
+      "description": "This project involves using Convolutional Neural Networks (CNN) and regularization techniques, specifically L2 and Dropout regularization, to classify mammal species. It showcases the implementation of treating an overfitting case in the model with these methods within a Kaggle notebook environment.",
+      "platform": ["Kaggle"],
+      "github": "https://github.com/jlsude/Kaggle-Notebook-Mammal-Classification-with-CNN-and-Regularization",
+      "demoLink": "https://www.kaggle.com/code/cmosbattery/mammal-classification-with-cnn-and-regularization",
+      "isPrivate": false,
+      "online": true,
+      "status": "Available",
+      "techStack": ["Tensorflow", "Matplotplib"]
+    },
+    {
+      "thumbnail": "HeartAttackPredictionWithSVM.png",
+      "projectName": "Heart Attack Prediction with SVM",
+      "description": "An adapted data science final group project that applies Support Vector Machine (SVM) algorithm for predicting heart attack cases.",
+      "platform": ["Web App (responsive)"],
+      "github": "https://github.com/jlsude/heart-attack-prediction-with-svm",
+      "demoLink": "https://heart-attack-prediction-with-svm.web.app/",
+      "isPrivate": false,
+      "online": true,
+      "status": "Under Development",
+      "techStack": ["Firebase", "React.ts", "ONNX.js"]
+    },
+    {
+      "thumbnail": "KNHeartAttackPredictionWithSVM.png",
+      "projectName": "Kaggle Notebook: Heart Attack Prediction with SVM",
+      "description": "This project involves predicting the likelihood of heart attacks using Support Vector Machines (SVM) in a Kaggle notebook. The notebook demonstrates data preprocessing, feature selection, model training, hyperparameter tuning with GridSearchCV, and evaluation to achieve accurate predictions.",
+      "platform": ["Kaggle"],
+      "github": "https://github.com/jlsude/Kaggle-Notebook-Heart-Attack-Prediction-with-SVM",
+      "demoLink": "https://www.kaggle.com/code/cmosbattery/heart-attack-prediction-with-svm",
+      "isPrivate": false,
+      "online": true,
+      "status": "Available",
+      "techStack": ["Pandas", "Plotly Express", "Scikit-learn", "ONNX.js"]
     },
     {
       "thumbnail": "LakbayThumbnail.png",
       "projectName": "Lakbay",
       "description": "A full-stack software project enabling users to discover landmarks and track their travel adventures. It highlights nearby landmarks using GPS coordinates, offers thematic bucket lists to inspire exploration, and fosters storytelling through a seamless digital experience.",
-      "platform": ["Mobile", "Web (responsive)"],
+      "platform": ["Android", "Web (responsive)"],
       "github": "",
       "demoLink": "",
       "isPrivate": true,
       "online": false,
       "status": "Under Development",
-      "techStack": ["Firebase", "Express", "React.js", "Node.js"]
+      "techStack": [
+        "Firebase",
+        "Android Jetpack Compose",
+        "Express",
+        "React.js",
+        "Node.js"
+      ]
+    },
+    {
+      "thumbnail": "ArtsyLensAppointmentSystem.png",
+      "projectName": "Artsy Lens Appointment System",
+      "description": "A Database Management System final group project that applies database normalization and relational concepts. It is built with respect to the business rules of Artsy Lens, a photography business, and is implemented using MySQL, Express.js, and Node.js environment.",
+      "platform": ["Backend"],
+      "github": "https://github.com/jlsude/CPE-202-CPE21S3-Final-Project-Group-3",
+      "demoLink": "N/A",
+      "isPrivate": false,
+      "online": false,
+      "status": "Completed, Offline",
+      "techStack": ["MySQL", "Node.js", "Express.js"]
     }
   ]
 }
