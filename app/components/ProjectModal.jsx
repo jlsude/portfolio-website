@@ -52,7 +52,7 @@ export default function ProjectModal(props) {
             </p>
 
             <div className="p-small flex flex-row">
-              {isPrivate ? null : (
+              {online ? (
                 <Link
                   href={demoLink}
                   target="_blank"
@@ -61,9 +61,9 @@ export default function ProjectModal(props) {
                 >
                   Demo
                 </Link>
-              )}
-              {!isPrivate === online ? <p>&nbsp;|&nbsp;</p> : null}
-              {online ? (
+              ) : null}
+              {isPrivate === false && online ? <p>&nbsp;|&nbsp;</p> : null}
+              {isPrivate ? null : (
                 <Link
                   href={github}
                   target="_blank"
@@ -72,7 +72,7 @@ export default function ProjectModal(props) {
                 >
                   Repo
                 </Link>
-              ) : null}
+              )}
             </div>
           </div>
 
