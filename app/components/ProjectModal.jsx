@@ -14,6 +14,7 @@ export default function ProjectModal(props) {
     thumbnail,
     demoLink,
     online,
+    github,
     isPrivate,
   } = props;
   console.log(projectName);
@@ -50,16 +51,29 @@ export default function ProjectModal(props) {
               })}
             </p>
 
-            {isPrivate ? null : (
-              <Link
-                href={demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-small cursor-pointer hover:underline"
-              >
-                Demo
-              </Link>
-            )}
+            <div className="p-small flex flex-row">
+              {online ? (
+                <Link
+                  href={demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-small cursor-pointer hover:underline"
+                >
+                  Demo
+                </Link>
+              ) : null}
+              {isPrivate === false && online ? <p>&nbsp;|&nbsp;</p> : null}
+              {isPrivate ? null : (
+                <Link
+                  href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-small cursor-pointer hover:underline"
+                >
+                  Repo
+                </Link>
+              )}
+            </div>
           </div>
 
           <p className="mt-5 text-justify indent-5">{description}</p>
