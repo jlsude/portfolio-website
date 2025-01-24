@@ -50,7 +50,6 @@ export default function ProjectModal(props) {
                 return index < array.length - 1 ? `${item}, ` : item;
               })}
             </p>
-
             <div className="p-small flex flex-row">
               {online ? (
                 <Link
