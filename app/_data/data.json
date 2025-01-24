@@ -60,7 +60,7 @@
       "platform": ["Kaggle"],
       "github": "https://github.com/jlsude/Kaggle-Notebook-Mammal-Classification-with-CNN-and-Regularization",
       "demoLink": "https://www.kaggle.com/code/cmosbattery/mammal-classification-with-cnn-and-regularization",
-      "isPrivate": false,
+      "isPrivate": true,
       "online": true,
       "status": "Available",
       "techStack": ["Tensorflow", "Matplotplib"]
@@ -84,7 +84,7 @@
       "platform": ["Kaggle"],
       "github": "https://github.com/jlsude/Kaggle-Notebook-Heart-Attack-Prediction-with-SVM",
       "demoLink": "https://www.kaggle.com/code/cmosbattery/heart-attack-prediction-with-svm",
-      "isPrivate": false,
+      "isPrivate": true,
       "online": true,
       "status": "Available",
       "techStack": ["Pandas", "Plotly Express", "Scikit-learn", "ONNX.js"]
