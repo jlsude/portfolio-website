@@ -92,7 +92,7 @@
     {
       "thumbnail": "LakbayThumbnail.png",
       "projectName": "Lakbay",
-      "description": "A full-stack software project enabling users to discover landmarks and track their travel adventures. It highlights nearby landmarks using GPS coordinates, offers thematic bucket lists to inspire exploration, and fosters storytelling through a seamless digital experience.",
+      "description": "Lakbay is a full-stack software project and tourism platform that empowers users to discover landmarks, track their travel adventures, and explore the historical and cultural significance of destinations. By leveraging GPS coordinates, thematic bucket lists, and storytelling tools, it bridges the gap caused by decentralized landmark information, bringing history and heritage closer to users' fingertips.",
       "platform": ["Android", "Web (responsive)"],
       "github": "",
       "demoLink": "",
