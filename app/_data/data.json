@@ -32,12 +32,16 @@
     ],
     "tools": [
       { "name": "VS Code", "confidenceLevel": 3 },
-      { "name": "Figma", "confidenceLevel": 3 },
-      { "name": "Firebase", "confidenceLevel": 3 },
+      { "name": "Project IDX", "confidenceLevel": 3 },
+      { "name": "Android Studio", "confidenceLevel": 3 },
       { "name": "Github", "confidenceLevel": 3 },
-      { "name": "Google Collab", "confidenceLevel": 3 },
+      { "name": "Firebase", "confidenceLevel": 3 },
+      { "name": "Postman", "confidenceLevel": 3 },
       { "name": "Render", "confidenceLevel": 3 },
-      { "name": "Kaggle", "confidenceLevel": 3 }
+      { "name": "Figma", "confidenceLevel": 3 },
+      { "name": "Google Collab", "confidenceLevel": 3 },
+      { "name": "Kaggle", "confidenceLevel": 3 },
+      { "name": "Notion", "confidenceLevel": 3 }
     ]
   },
   "projects": [
@@ -68,7 +72,7 @@
     {
       "thumbnail": "HeartAttackPredictionWithSVM.png",
       "projectName": "Heart Attack Prediction with SVM",
-      "description": "An adapted data science final group project that applies Support Vector Machine (SVM) algorithm for predicting heart attack cases.",
+      "description": "An adapted data science final group project that applies Support Vector Machine (SVM) algorithm for predicting heart attack cases. The frontend is built with React TypeScript, and the model is trained using Scikit-learn and exported via ONNX for client-side inference.",
       "platform": ["Web App (responsive)"],
       "github": "https://github.com/jlsude/heart-attack-prediction-with-svm",
       "demoLink": "https://heart-attack-prediction-with-svm.web.app/",
