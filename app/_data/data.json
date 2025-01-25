@@ -32,12 +32,16 @@
     ],
     "tools": [
       { "name": "VS Code", "confidenceLevel": 3 },
-      { "name": "Figma", "confidenceLevel": 3 },
-      { "name": "Firebase", "confidenceLevel": 3 },
+      { "name": "Project IDX", "confidenceLevel": 3 },
+      { "name": "Android Studio", "confidenceLevel": 3 },
       { "name": "Github", "confidenceLevel": 3 },
-      { "name": "Google Collab", "confidenceLevel": 3 },
+      { "name": "Firebase", "confidenceLevel": 3 },
+      { "name": "Postman", "confidenceLevel": 3 },
       { "name": "Render", "confidenceLevel": 3 },
-      { "name": "Kaggle", "confidenceLevel": 3 }
+      { "name": "Figma", "confidenceLevel": 3 },
+      { "name": "Google Collab", "confidenceLevel": 3 },
+      { "name": "Kaggle", "confidenceLevel": 3 },
+      { "name": "Notion", "confidenceLevel": 3 }
     ]
   },
   "projects": [
