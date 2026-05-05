@@ -1,16 +1,19 @@
 import React, { useRef, useState, useEffect } from "react";
-import ProjectCard from "../components/ProjectCard";
 import data from "../_data/data.json";
-import Carousel from "../components/Carousel";
-import ProjectModal from "../components/ProjectModal";
+import Carousel from "../../components/ui/Carousel";
+import ProjectModal from "../../features/projects/ProjectModal";
+import ProjectCard from "../../features/projects/ProjectCard";
+import type { Project } from "../../types/Project";
 
 const Projects = React.forwardRef((props, ref) => {
-  const [displayModal, setDisplayModal] = useState(false);
-  const [projectModalData, setProjectModalData] = useState({});
+  const [displayModal, setDisplayModal] = useState<boolean>(false);
+  const [projectModalData, setProjectModalData] = useState<Project | null>(
+    null,
+  );
   const projectsRef = useRef(null);
-  const projects = data.projects;
+  const projects = data.projects as Project[];
 
-  const scrollToSection = (ref) => {
+  const scrollToSection = (ref: any) => {
     ref.current.scrollIntoView({ behavior: "auto" });
   };
 
@@ -31,12 +34,8 @@ const Projects = React.forwardRef((props, ref) => {
       ref={projectsRef}
       className="grid-template-system relative min-h-screen w-screen bg-[#231D18]"
     >
-      {displayModal ? (
-        <ProjectModal
-          {...projectModalData}
-          setDisplayModal={setDisplayModal}
-          className={"absolute z-10"}
-        />
+      {displayModal && projectModalData ? (
+        <ProjectModal {...projectModalData} setDisplayModal={setDisplayModal} />
       ) : null}
 
       <div className="col-span-full row-start-1 flex items-end justify-center md:items-center">

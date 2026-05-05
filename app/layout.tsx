@@ -8,7 +8,7 @@ export const metadata = {
   description: "A portfolio website made by and for jlsude",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: any) {
   return (
     <html lang="en">
       <body className={exo.className}>{children}</body>

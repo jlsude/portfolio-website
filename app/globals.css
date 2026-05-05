@@ -1,6 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+
+@theme {
+  --color-text: rgb(9, 8, 7);
+  --color-background: rgb(243, 237, 231);
+  --color-primary: rgb(71, 64, 56);
+  --color-secondary: rgb(183, 196, 177);
+  --color-accent: rgb(255, 128, 0);
+}
+
+.dark {
+  --color-text: rgb(248, 247, 246);
+  --color-background: rgb(24, 18, 12);
+  --color-primary: rgb(199, 192, 184);
+  --color-secondary: rgb(65, 78, 59);
+  --color-accent: rgb(255, 128, 0);
+}
 
 .colorTransition {
   transition: background-color 0.2s ease-in;
@@ -84,21 +99,4 @@ li {
 
 .slick-slide > div {
   margin: 0 5px;
-}
-
-@layer base {
-  :root {
-    --text: 9 8 7;
-    --background: 243 237 231;
-    --primary: 71 64 56;
-    --secondary: 183 196 177;
-    --accent: 255 128 0;
-  }
-  .dark {
-    --text: 248 247 246;
-    --background: 24 18 12;
-    --primary: 199 192 184;
-    --secondary: 65 78 59;
-    --accent: 255 128 0;
-  }
 }

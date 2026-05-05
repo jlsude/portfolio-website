@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
-export default function Carousel({ children }) {
+export default function Carousel({ children }: any) {
   var settings = {
     dots: true,
     infinite: false,
@@ -39,14 +39,14 @@ export default function Carousel({ children }) {
         },
       },
     ],
-    appendDots: (dots) => (
+    appendDots: (dots: any) => (
       <div>
         <ul
           style={{ margin: "0" }}
           className="flex justify-center pt-[100px] sm:pt-3"
         >
           {/* never thought this thing would work lol */}
-          {dots.map((dot, index) => {
+          {dots.map((dot: any, index: number) => {
             // console.log(dot.props.children.props.onClick, index)
             let active = dot.props.className === "slick-active";
             return (
@@ -70,7 +70,7 @@ export default function Carousel({ children }) {
     </div>
   );
 
-  function Arrow(props) {
+  function Arrow(props: any) {
     const { onClick, right } = props;
     //console.log(props.className.includes("slick-disabled"), "prev");
     let disabled = props.className.includes("slick-disabled");

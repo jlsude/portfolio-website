@@ -1,19 +1,14 @@
 import React from "react";
 import data from "../_data/data.json";
-import SkillsFlair from "../components/SkillsFlair";
+import SkillsFlair from "../../components/ui/SkillsFlair";
 
-const AboutSkills = React.forwardRef((props, ref) => {
-  const { aboutRef, skillsRef } = props;
-
+export default function About() {
   let languages = data.skills.languages;
   let frameworksLibraries = data.skills.frameworksLibraries;
   let tools = data.skills.tools;
 
   return (
-    <main
-      ref={aboutRef}
-      className="grid-template-system relative min-h-screen w-screen bg-background"
-    >
+    <main className="grid-template-system bg-background relative min-h-screen w-screen">
       <div className="col-span-full row-span-3 flex flex-col gap-3 p-5 text-justify md:col-span-4 md:col-start-1 md:row-span-4 md:row-start-2 xl:col-span-5 xl:col-start-2 xl:row-span-4 xl:row-start-2">
         <h2 className="mb-5 text-center">about</h2>
         <p className="indent-5">
@@ -57,16 +52,13 @@ const AboutSkills = React.forwardRef((props, ref) => {
               <SkillsFlair data={tools} />
             </div>
           </div>
-          <div className="mt-5 flex flex-row-reverse gap-20 self-center md:ml-5 md:mt-16 md:flex-col md:self-start">
-            <div className="aspect-square w-3 bg-accent" />
-            <div className="aspect-square w-3 bg-accent/50" />
-            <div className="aspect-square w-3 bg-accent/20" />
+          <div className="mt-5 flex flex-row-reverse gap-20 self-center md:mt-16 md:ml-5 md:flex-col md:self-start">
+            <div className="bg-accent aspect-square w-3" />
+            <div className="bg-accent/50 aspect-square w-3" />
+            <div className="bg-accent/20 aspect-square w-3" />
           </div>
         </div>
       </div>
     </main>
   );
-});
-
-AboutSkills.displayName = "AboutSkills";
-export default AboutSkills;
+}

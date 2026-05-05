@@ -5,6 +5,8 @@ import Link from "next/link";
 export default function Footer() {
   const { version } = packageJson;
 
+  const currentYear = new Date().getFullYear();
+
   const data = [
     {
       platform: "GitHub",
@@ -33,8 +35,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="flex h-[650px] w-screen items-center justify-center bg-[#231D18] px-[30px] pb-[100px] pt-[70px] shadow-md sm:h-[600px]">
-      <div className="flex h-full w-full max-w-[1400px] flex-col items-center rounded-2xl bg-secondary/30 p-8">
+    <footer className="flex h-[650px] w-screen items-center justify-center bg-[#231D18] px-[30px] pt-[70px] pb-[100px] shadow-md sm:h-[600px]">
+      <div className="bg-secondary/30 flex h-full w-full max-w-[1400px] flex-col items-center rounded-2xl p-8">
         <h2 className="text-center">let&apos;s keep in touch!</h2>
         <ul className="mt-10 grid grid-cols-1 grid-rows-6 gap-x-[100px] gap-y-5 text-center sm:grid-cols-3 sm:grid-rows-2">
           {data.map((item, index) => {
@@ -52,7 +54,9 @@ export default function Footer() {
           })}
         </ul>
 
-        <small className="mt-auto">© 2025. All Rights Reserved</small>
+        <small className="mt-auto">
+          © {currentYear}. {version}. All Rights Reserved
+        </small>
       </div>
     </footer>
   );
