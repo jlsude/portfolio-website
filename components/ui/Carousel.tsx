@@ -4,8 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Carousel({ children }: any) {
   var settings = {
@@ -77,12 +76,12 @@ export default function Carousel({ children }: any) {
     return (
       <button
         onClick={onClick}
-        className={`${disabled ? "hidden" : "flex"} ${right ? "-right-[0px] translate-x-10" : "-translate-x-10"} absolute top-[50%] flex aspect-square w-[40px] -translate-y-10 cursor-pointer items-center rounded-full text-[30px] text-text active:bg-primary/10`}
+        className={`${disabled ? "hidden" : "flex"} ${right ? "-right-[0px] translate-x-10" : "-translate-x-10"} text-text active:bg-primary/10 absolute top-[50%] flex aspect-square w-[40px] -translate-y-10 cursor-pointer items-center rounded-full text-[30px]`}
       >
         {right ? (
-          <ChevronRightIcon fontSize="inherit" className="m-auto" />
+          <ChevronRight className="m-auto" />
         ) : (
-          <ChevronLeftIcon fontSize="inherit" className="m-auto" />
+          <ChevronLeft className="m-auto" />
         )}
       </button>
     );

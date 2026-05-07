@@ -1,20 +1,21 @@
 import React from "react";
 
-export default function SkillsFlair({ data }: any) {
+export default function SkillsFlair({
+  skills,
+  className,
+}: {
+  skills: string[];
+  className?: string;
+}) {
   return (
     <ul className="">
-      {data.map((item: any, index: number) => {
-        const level = item.confidenceLevel;
-
-        const colorList: Record<number, string> = {
-          1: "!border-accent/20",
-          2: "!border-accent/50",
-          3: "!border-accent",
-        };
-
+      {skills.map((item: string, index: number) => {
         return (
-          <li key={index} className={`border-4 ${colorList[level]}`}>
-            {item.name}
+          <li
+            key={index}
+            className={`border-accent mr-1 mb-1 rounded-full border-3 px-2 py-0.5 text-xs`}
+          >
+            {item}
           </li>
         );
       })}

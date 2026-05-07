@@ -11,7 +11,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       onClick={onClick}
       className="colorTransition hover:bg-primary/10 relative flex h-full w-full flex-col rounded-2xl p-5 hover:cursor-pointer"
     >
-      <div className="border-primary bg-primary/20 aspect-video h-auto w-full min-w-[200px] rounded-xl border">
+      <div className="border-primary bg-primary/20 aspect-video h-auto w-full min-w-50 rounded-xl border">
         <Image
           src={`/static/thumbnails/${thumbnail}`}
           className="h-full w-full max-w-none object-cover"
@@ -28,7 +28,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       <div className="mt-3 flex items-end justify-between">
         <h4>{projectName}</h4>
       </div>
-      <p className="p-small !text-text/80">
+      <p className="p-small text-text/80!">
         Platform: {platform.map((item) => item).join(", ")}
       </p>
       <ul className="mt-2">

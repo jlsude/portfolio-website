@@ -1,62 +1,125 @@
-import React from "react";
-import data from "../_data/data.json";
-import SkillsFlair from "../../components/ui/SkillsFlair";
+"use client";
 
-export default function About() {
-  let languages = data.skills.languages;
-  let frameworksLibraries = data.skills.frameworksLibraries;
-  let tools = data.skills.tools;
+import React, { useRef, type RefObject } from "react";
+import data from "../_data/data.json";
+import CategorySkillCard from "../../features/about/CategorySkillCard";
+import type { CategorySkill } from "../../types/CategorySkill";
+import type { WorkExperience } from "../../types/WorkExperience";
+import ChevronHorizontalButtons from "../../components/ui/ChevronHorizontalButtons";
+import WorkExperienceCard from "../../features/about/WorkExperienceCard";
+import LookingForWorkCard from "@/features/about/LookingForWorkCard";
+
+export default function Page() {
+  const openToWork = true;
+
+  const categorySkillScrollRef = useRef<HTMLDivElement>(null);
+  const workExperienceScrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (
+    scrollRef: RefObject<HTMLDivElement | null> | null,
+    querySelector: string,
+    isNegative: boolean = false,
+  ) => {
+    const container = scrollRef?.current;
+    if (container) {
+      const card = container.querySelector(querySelector);
+      if (card) {
+        const cardWidth = (card as HTMLElement).offsetWidth;
+        container.scrollBy({
+          left: isNegative ? -1 * cardWidth : cardWidth,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
+
+  const categories: CategorySkill[] = Object.entries(data.skills).map(
+    ([key, value]) => ({
+      name: key,
+      skills: value.items,
+      icon: value.icon as CategorySkill["icon"],
+    }),
+  );
+
+  const workExperiences: WorkExperience[] =
+    data.experiences as WorkExperience[];
 
   return (
     <main className="grid-template-system bg-background relative min-h-screen w-screen">
-      <div className="col-span-full row-span-3 flex flex-col gap-3 p-5 text-justify md:col-span-4 md:col-start-1 md:row-span-4 md:row-start-2 xl:col-span-5 xl:col-start-2 xl:row-span-4 xl:row-start-2">
-        <h2 className="mb-5 text-center">about</h2>
-        <p className="indent-5">
-          I&apos;m a senior Computer Engineering student at the Technological
-          Institute of the Philippines - Manila with a passion for full-stack
-          development, software engineering, data science, machine learning.
-          Throughout my college journey, I&apos;ve been honored with awards like
-          President&apos;s, Vice President&apos;s, and Dean&apos;s Listers.
-        </p>
-        <p className="indent-5">
-          In my free time, I love working on cool software projects to sharpen
-          my skills and teaming up with my classmates on various projects. I
-          also join hackathons and events at my school related to my passion and
-          interests. I enjoy working with people from diverse backgrounds and am
-          always open to future collaborations and work.
-        </p>
-        <p className="indent-5">
-          As of the moment, I&apos;m diving into web and mobile development and
-          mixing in several machine learning models. My goal is to become an
-          accomplished and proficient professional in the field of software
-          engineering who can create innovative and impactful solutions.
-        </p>
+      <div className="col-span-full row-span-3 row-start-1 flex flex-col">
+        <div className="mb-4 flex w-auto flex-row space-x-4">
+          <div className="bg-accent h-8 w-1" />
+          <h3 className="">education and skills</h3>
+        </div>
+
+        <div className="my-6 flex flex-col">
+          <div className="flex flex-row justify-between space-x-4">
+            <h4>
+              Bachelor of Science in Computer Engineering Major in Data Science
+            </h4>
+            <p className="min-w-20">2021-2025</p>
+          </div>
+          <p className="pt-1">
+            Technological Institute of the Philippines - Manila (Magna Cum
+            Laude)
+          </p>
+        </div>
+
+        <ChevronHorizontalButtons
+          onLeftClick={() =>
+            scroll(categorySkillScrollRef, ".category-card", true)
+          }
+          onRightClick={() => scroll(categorySkillScrollRef, ".category-card")}
+        />
+
+        <div
+          ref={categorySkillScrollRef}
+          className="scrollbar-hide flex snap-x snap-proximity flex-row space-x-4 overflow-x-auto px-12 pb-8"
+          style={{ scrollBehavior: "smooth" }}
+        >
+          {categories.map((item, index) => {
+            return (
+              <CategorySkillCard
+                key={index}
+                className={"category-card"}
+                params={{ ...item }}
+              />
+            );
+          })}
+        </div>
       </div>
 
-      <div className="col-span-full row-span-4 flex flex-col p-5 text-justify md:col-span-4 md:col-start-5 md:row-span-4 md:row-start-2 xl:col-span-5 xl:col-start-7 xl:row-span-4 xl:row-start-2">
-        <h2 className="mb-5 text-center">skills</h2>
-        <div className="flex flex-col md:flex-row">
-          <div className="skills flex flex-col gap-3 px-5">
-            <div>
-              <h3 className="">languages</h3>
-              <SkillsFlair data={languages} />
-            </div>
+      <div className="col-span-full row-span-3 row-start-4 flex flex-col">
+        <div className="mb-4 flex w-auto flex-row space-x-4">
+          <div className="bg-accent h-8 w-1" />
+          <h3 className="">career history</h3>
+        </div>
 
-            <div>
-              <h3 className="text-left">libraries & frameworks</h3>
-              <SkillsFlair data={frameworksLibraries} />
-            </div>
-
-            <div>
-              <h3 className="">tools</h3>
-              <SkillsFlair data={tools} />
-            </div>
-          </div>
-          <div className="mt-5 flex flex-row-reverse gap-20 self-center md:mt-16 md:ml-5 md:flex-col md:self-start">
-            <div className="bg-accent aspect-square w-3" />
-            <div className="bg-accent/50 aspect-square w-3" />
-            <div className="bg-accent/20 aspect-square w-3" />
-          </div>
+        <ChevronHorizontalButtons
+          onLeftClick={() =>
+            scroll(workExperienceScrollRef, ".experience-card", true)
+          }
+          onRightClick={() =>
+            scroll(workExperienceScrollRef, ".experience-card")
+          }
+        />
+        <div
+          ref={workExperienceScrollRef}
+          className="scrollbar-hide flex snap-x flex-row space-x-4 overflow-x-auto px-12 pb-8"
+          style={{ scrollBehavior: "smooth" }}
+        >
+          {openToWork && <LookingForWorkCard className="experience-card" />}
+          {workExperiences
+            .map((item, index) => {
+              return (
+                <WorkExperienceCard
+                  key={index}
+                  className="experience-card"
+                  workExperience={item}
+                />
+              );
+            })
+            .reverse()}
         </div>
       </div>
     </main>

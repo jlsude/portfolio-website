@@ -1,49 +1,64 @@
 {
   "skills": {
-    "languages": [
-      { "name": "HTML/CSS", "confidenceLevel": 2 },
-      { "name": "C++", "confidenceLevel": 3 },
-      { "name": "Python", "confidenceLevel": 2 },
-      { "name": "JavaScript", "confidenceLevel": 3 },
-      { "name": "SQL", "confidenceLevel": 2 },
-      { "name": "Verilog", "confidenceLevel": 1 },
-      { "name": "Assembly", "confidenceLevel": 2 },
-      { "name": "TypeScript", "confidenceLevel": 1 },
-      { "name": "Java", "confidenceLevel": 1 },
-      { "name": "Kotlin", "confidenceLevel": 1 }
-    ],
-    "frameworksLibraries": [
-      { "name": "Vue.js", "confidenceLevel": 2 },
-      { "name": "React", "confidenceLevel": 3 },
-      { "name": "Pandas", "confidenceLevel": 2 },
-      { "name": "Seaborn", "confidenceLevel": 2 },
-      { "name": "Matplotlib", "confidenceLevel": 1 },
-      { "name": "Plotly Express", "confidenceLevel": 2 },
-      { "name": "Next.js", "confidenceLevel": 1 },
-      { "name": "Flask", "confidenceLevel": 1 },
-      { "name": "TailwindCSS", "confidenceLevel": 3 },
-      { "name": "Scikit-learn", "confidenceLevel": 2 },
-      { "name": "React Native", "confidenceLevel": 1 },
-      { "name": "Node.js", "confidenceLevel": 2 },
-      { "name": "Express.js", "confidenceLevel": 2 },
-      { "name": "Tensorflow", "confidenceLevel": 2 },
-      { "name": "ONNX.js", "confidenceLevel": "1" },
-      { "name": "Android Jetpack Compose", "confidenceLevel": 1 }
-    ],
-    "tools": [
-      { "name": "VS Code", "confidenceLevel": 3 },
-      { "name": "Project IDX", "confidenceLevel": 3 },
-      { "name": "Android Studio", "confidenceLevel": 3 },
-      { "name": "Github", "confidenceLevel": 3 },
-      { "name": "Firebase", "confidenceLevel": 3 },
-      { "name": "Postman", "confidenceLevel": 3 },
-      { "name": "Render", "confidenceLevel": 3 },
-      { "name": "Figma", "confidenceLevel": 3 },
-      { "name": "Google Collab", "confidenceLevel": 3 },
-      { "name": "Kaggle", "confidenceLevel": 3 },
-      { "name": "Notion", "confidenceLevel": 3 }
-    ]
+    "Languages": {
+      "items": ["JavaScript/TypeScript", "Python", "SQL", "HTML/CSS", "Dart"],
+      "icon": "code"
+    },
+    "Backend": {
+      "items": ["Node.js", "Express.js"],
+      "icon": "server"
+    },
+    "Frontend": {
+      "items": ["Flutter", "React.js", "Next.js", "TailwindCSS"],
+      "icon": "layout"
+    },
+    "Database": {
+      "items": ["Firebase Firestore", "PostgreSQL", "Supabase"],
+      "icon": "database"
+    },
+    "Blockchain & Payments": {
+      "items": ["Solidity", "Xendit"],
+      "icon": "bitcoin"
+    },
+    "AI/ML": {
+      "items": ["Tensorflow", "Scikit-learn", "Pandas", "Gemma"],
+      "icon": "brain_circuit"
+    },
+    "Development Tools": {
+      "items": [
+        "VS Code",
+        "Github",
+        "Firebase",
+        "GitLab",
+        "Postman",
+        "Figma",
+        "Supabase"
+      ],
+      "icon": "terminal"
+    }
   },
+  "experiences": [
+    {
+      "companyName": "PGX Group Inc.",
+      "logo": "PGXGroup.jpg",
+      "duration": {
+        "startDate": "2025-5-1",
+        "endDate": "2026-4-30"
+      },
+      "employmentType": "contract",
+      "position": "Full Stack Developer",
+      "techStack": [
+        "Flutter",
+        "Node.js",
+        "Firebase",
+        "Xendit",
+        "Ethereum (SKALE)",
+        "Gemma"
+      ],
+      "shortDescription": "Sole full-stack developer on a live event ticketing platform handling real user funds and blockchain-based ticketing.",
+      "longDescription": "* Designed and implemented an idempotent wallet system with a double-entry accounting ledger and auditable transaction log, managing 100% of user balances and processing significant transaction volume through Xendit during early access launch.\n* Architected 100+ RESTful APIs using Node.js and Express on Firebase Cloud Functions for an event ticketing platform. Implemented a granular event-scoped RBAC system with organizer-defined roles modeled as Firestore subcollections with denormalized role data on event team member documents for efficient single-read authorization, enforcing all access control server-side beyond Firebase's client-side security rules.\n* Designed a cost-efficient Firestore data model with intentional denormalization across tickets and events to prevent read amplification. Implemented Firestore security rules for role-scoped real-time reads, eliminating the need for websocket infrastructure while maintaining granular access control on the client.\n* Developed a secure QR code ticket validation system using AES-256-GCM encryption with time-bound payloads expiring after 60 seconds to prevent screenshot and replay attacks. Enforced backend-only verification with Firestore transactions to eliminate race conditions during concurrent scans, restricted to authorized scanners via the platform's RBAC system.\n* Developed and deployed a custom ERC-721 smart contract on the SKALE network for gasless NFT-based ticketing, integrating on-chain minting and transfers via ethers.js triggered by Firestore document events. Enabled seamless blockchain ticketing without exposing users to gas fees or wallet complexity.\n* Integrated a Gemma 3 LLM chatbot for event organizers to query real-time ticket sales analytics, implementing conversation context management and an aggregated sales cache with staleness validation to minimize Firestore read operations on every prompt.\n* Configured GitLab CI/CD pipelines with multi-environment deployments across staging and production for both frontend and backend services.\n* Implemented an automated test suite using Jest with 67 tests covering critical financial logic including ticket sales calculations and event earnings disbursements.\n* Developed and maintained the Flutter web frontend with mobile responsiveness as the sole developer, implementing Riverpod state management and real-time Firestore listeners integrated with the platform's backend services."
+    }
+  ],
   "projects": [
     {
       "thumbnail": "MammalSpeciesClassification.png",
@@ -78,7 +93,7 @@
       "demoLink": "https://heart-attack-prediction-with-svm.web.app/",
       "isPrivate": false,
       "online": true,
-      "status": "Under Development",
+      "status": "Completed",
       "techStack": ["Firebase", "React.ts", "ONNX.js"]
     },
     {
@@ -92,36 +107,6 @@
       "online": true,
       "status": "Available",
       "techStack": ["Pandas", "Plotly Express", "Scikit-learn", "ONNX.js"]
-    },
-    {
-      "thumbnail": "LakbayThumbnail.png",
-      "projectName": "Lakbay",
-      "description": "Lakbay is a full-stack software project and tourism platform that empowers users to discover landmarks, track their travel adventures, and explore the historical and cultural significance of destinations. By leveraging GPS coordinates, thematic bucket lists, and storytelling tools, it bridges the gap caused by decentralized landmark information, bringing history and heritage closer to users' fingertips.",
-      "platform": ["Android", "Web (responsive)"],
-      "github": "",
-      "demoLink": "",
-      "isPrivate": true,
-      "online": false,
-      "status": "Under Development",
-      "techStack": [
-        "Firebase",
-        "Android Jetpack Compose",
-        "Express",
-        "React.js",
-        "Node.js"
-      ]
-    },
-    {
-      "thumbnail": "ArtsyLensAppointmentSystem.png",
-      "projectName": "Artsy Lens Appointment System",
-      "description": "A Database Management System final group project that applies database normalization and relational concepts. It is built with respect to the business rules of Artsy Lens, a photography business, and is implemented using MySQL, Express.js, and Node.js environment.",
-      "platform": ["Backend"],
-      "github": "https://github.com/jlsude/CPE-202-CPE21S3-Final-Project-Group-3",
-      "demoLink": "N/A",
-      "isPrivate": false,
-      "online": false,
-      "status": "Completed, Offline",
-      "techStack": ["MySQL", "Node.js", "Express.js"]
     }
   ]
 }

@@ -55,7 +55,7 @@ export default function Footer() {
         </ul>
 
         <small className="mt-auto">
-          © {currentYear}. {version}. All Rights Reserved
+          v{version} | ©{currentYear}. All Rights Reserved
         </small>
       </div>
     </footer>

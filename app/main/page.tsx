@@ -5,7 +5,7 @@ import TypeEffect from "../../features/main/TypeEffect";
 
 import primaryWaves from "../../public/static/waves/primary-waves.svg";
 
-export default function Main() {
+export default function Page() {
   return (
     <main className="grid-template-system bg-background relative h-dvh w-screen">
       <div className="absolute h-[345px] w-screen">
@@ -20,7 +20,7 @@ export default function Main() {
         <h3>Hello! I am</h3>
         <h1 className="text-accent font-bold">John Louie</h1>
         <h4>
-          A computer engineering graduate with interest in&nbsp;
+          A computer engineering graduate with an interest in&nbsp;
           <span className="text-accent inline-block font-bold">
             <TypeEffect />
           </span>

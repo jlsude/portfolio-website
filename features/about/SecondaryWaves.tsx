@@ -9,7 +9,7 @@ export default function SecondaryWaves() {
         src={secondaryWaves}
         alt="secondary waves"
         priority
-        className="h-full w-full max-w-none bg-background object-cover sm:object-fill"
+        className="bg-background h-full w-full max-w-none object-cover sm:object-fill"
       />
     </div>
   );

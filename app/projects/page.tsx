@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef, useState, useEffect } from "react";
 import data from "../_data/data.json";
 import Carousel from "../../components/ui/Carousel";
@@ -5,7 +6,7 @@ import ProjectModal from "../../features/projects/ProjectModal";
 import ProjectCard from "../../features/projects/ProjectCard";
 import type { Project } from "../../types/Project";
 
-const Projects = React.forwardRef((props, ref) => {
+const Page = React.forwardRef((props, ref) => {
   const [displayModal, setDisplayModal] = useState<boolean>(false);
   const [projectModalData, setProjectModalData] = useState<Project | null>(
     null,
@@ -34,7 +35,7 @@ const Projects = React.forwardRef((props, ref) => {
       ref={projectsRef}
       className="grid-template-system relative min-h-screen w-screen bg-[#231D18]"
     >
-      {displayModal && projectModalData ? (
+      {displayModal && projectModalData?.projectName ? (
         <ProjectModal {...projectModalData} setDisplayModal={setDisplayModal} />
       ) : null}
 
@@ -60,5 +61,5 @@ const Projects = React.forwardRef((props, ref) => {
   );
 });
 
-Projects.displayName = "Projects";
-export default Projects;
+Page.displayName = "Page";
+export default Page;
