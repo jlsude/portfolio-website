@@ -110,7 +110,7 @@ export default function WorkExperienceCard(props: {
               </p>
             )}
 
-            <div className="from-background sticky -bottom-12 z-20 h-[50px] w-full bg-linear-to-t" />
+            <div className="from-background sticky -bottom-16 z-20 h-20 w-full bg-linear-to-t" />
           </div>
         </div>
       )}

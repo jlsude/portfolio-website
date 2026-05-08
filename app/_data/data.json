@@ -13,7 +13,7 @@
       "icon": "layout"
     },
     "Database": {
-      "items": ["Firebase Firestore", "PostgreSQL", "Supabase"],
+      "items": ["Firebase Firestore", "PostgreSQL"],
       "icon": "database"
     },
     "Blockchain & Payments": {
